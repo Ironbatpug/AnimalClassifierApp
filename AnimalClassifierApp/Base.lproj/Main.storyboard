@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Classifier View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ClassifierViewController" customModule="AnimalClassifierApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1k-xR-fiH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-hq-Gye">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Pt8-cK-LRv">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="cameraBtnWasPressed:" destination="BYZ-38-t0r" id="7Wv-hs-kHl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILM-tm-U1x" customClass="RoundedVisualEffectView" customModule="AnimalClassifierApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="523" width="335" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1Jv-Wp-qkl">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the camera button to chose an image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Haf-5P-MqP">
+                                            <rect key="frame" x="8" y="12" width="319" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="AUg-qH-kbD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Haf-5P-MqP" firstAttribute="leading" secondItem="1Jv-Wp-qkl" secondAttribute="leading" constant="8" id="Hl4-TY-qCW"/>
+                                        <constraint firstAttribute="bottom" secondItem="Haf-5P-MqP" secondAttribute="bottom" constant="8" id="b6T-mZ-WZd"/>
+                                        <constraint firstAttribute="trailing" secondItem="Haf-5P-MqP" secondAttribute="trailing" constant="8" id="rlV-bo-jbB"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="WI1-WT-DyS"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sOa-hq-Gye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2lk-Ya-kcr"/>
+                            <constraint firstItem="sOa-hq-Gye" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8uG-zA-ZrB"/>
+                            <constraint firstItem="k1k-xR-fiH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bdh-O9-0YR"/>
+                            <constraint firstItem="ILM-tm-U1x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JFd-Bz-JPt"/>
+                            <constraint firstItem="k1k-xR-fiH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M8d-e1-0Sp"/>
+                            <constraint firstItem="sOa-hq-Gye" firstAttribute="top" secondItem="ILM-tm-U1x" secondAttribute="bottom" constant="20" id="TUM-VM-KnX"/>
+                            <constraint firstItem="sOa-hq-Gye" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WNs-rg-g7z"/>
+                            <constraint firstItem="k1k-xR-fiH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="csK-HD-luW"/>
+                            <constraint firstItem="k1k-xR-fiH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yhK-5B-JqW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ILM-tm-U1x" secondAttribute="trailing" constant="20" id="zvI-uP-wFJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationLbl" destination="Haf-5P-MqP" id="Yhm-4K-slf"/>
+                        <outlet property="imageView" destination="k1k-xR-fiH" id="WtL-ar-aWI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
